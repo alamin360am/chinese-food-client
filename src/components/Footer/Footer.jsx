@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='grid col-3'>
             <div className="footer-logo">
                 <img src="/Logo.png" alt="Logo" />
             </div>

@@ -1,9 +1,5 @@
 footer {
     padding: 3rem 10rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
     background-color: #0f0f0f;
     color: #fff;
 }
@@ -39,12 +35,4 @@ footer .link a {
 
 footer .link a:hover {
     text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-    footer {
-        padding: 3rem 4rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
 }
