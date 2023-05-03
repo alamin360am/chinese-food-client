@@ -21,6 +21,10 @@ body {
   color: #151515;
 }
 
+section {
+  padding: 3rem 0;
+}
+
 /* CSS Components */
 
 .grid {
@@ -34,6 +38,16 @@ body {
 
 .col-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section-title {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .btn-primary {
@@ -52,16 +66,18 @@ body {
   background-color: #F48C06;
 }
 
+@media screen and (max-width: 991px) {
+  .col-4 {grid-template-columns: repeat(2, 1fr);}
+}
+
 @media screen and (max-width: 768px) {
   .grid {
     gap: 1rem;
   }
 
-  .col-2 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .col-3 {
+  .col-2,
+  .col-3,
+  .col-4 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
