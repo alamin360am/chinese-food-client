@@ -33,14 +33,18 @@ main {
     justify-content: center;
     align-items: center;
     padding: 4rem;
-    border: 2px solid transparent;
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.4s;
 }
 
 .feature-card:hover {
-    border: 2px solid #FFBA08;
+    background-color: #FFBA08;
+    color: #fff;
+}
+
+.feature-card:hover .icon {
+    color: #fff;
 }
 
 .feature-card .icon {
@@ -51,6 +55,10 @@ main {
 .feature-card p {
     font-size: 2rem;
     font-weight: 700;
+}
+
+.partners .img-box img {
+    width: 40%;
 }
 
 @media screen and (max-width: 768px) {

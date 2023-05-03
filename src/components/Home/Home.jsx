@@ -33,6 +33,23 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="partners">
+        <h2 className="section-title">Our Partners</h2>
+        <div className="grid col-4">
+            <div className="img-box">
+                <img src="./partner-01.png" alt="" />
+            </div>
+            <div className="img-box">
+                <img src="./partner-02.png" alt="" />
+            </div>
+            <div className="img-box">
+                <img src="./partner-03.png" alt="" />
+            </div>
+            <div className="img-box">
+                <img src="./partner-04.png" alt="" />
+            </div>
+        </div>
+      </section>
     </main>
   );
 };
