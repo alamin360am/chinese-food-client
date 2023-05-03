@@ -4,7 +4,10 @@ import './home.css';
 const Home = () => {
     return (
         <main>
-            <h1>Home</h1>
+            <div className="banner">
+                <h1 className="title">All <span>Chinese Recipes</span> are here.</h1>
+                <button className="btn-primary">Explore More</button>
+            </div>
         </main>
     );
 };

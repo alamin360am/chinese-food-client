@@ -1,5 +1,5 @@
 /* Font input */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 /* Basic SetUp */
 
@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: #151515;
@@ -36,13 +36,31 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.btn-primary {
+  outline: none;
+  border: none;
+  background-color: #ffba08;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn-primary:hover {
+  background-color: #F48C06;
+}
+
 @media screen and (max-width: 768px) {
-  .grid {gap: 1rem;}
-  
+  .grid {
+    gap: 1rem;
+  }
+
   .col-2 {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   .col-3 {
     grid-template-columns: repeat(1, 1fr);
   }

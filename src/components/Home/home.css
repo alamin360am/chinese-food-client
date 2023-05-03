@@ -1,4 +1,41 @@
 main {
-    padding: 2rem 10rem;
+    padding: 0 10rem;
     background-color: #e6fef1;
+}
+
+.banner {
+    height: calc(100vh - 65px);
+    background-image: url('./banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .title {
+    color: #fff;
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+}
+
+.banner .title span {
+    color: #FFBA08;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 0 2rem;
+    }
+    
+    .banner .title {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    
+    .banner .title span {
+        color: #FFBA08;
+    }
 }
