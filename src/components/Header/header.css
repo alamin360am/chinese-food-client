@@ -1,0 +1,53 @@
+header {
+    padding: 1rem 10rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    width: 6rem;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+.nav-link a {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: #a1a1a1;
+    transition: all 0.3s;
+}
+
+.nav-link a.active,
+.nav-link a:hover {
+    color: #000;
+}
+
+.user-btn {
+    border: none;
+    outline: none;
+    background-color: #FFBA08;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.user-btn:hover {
+    background-color: #F48C06;
+}
+
+@media screen and (max-width: 768px) {
+    header {padding: 1rem 2rem;}
+    nav .logo {width: 4rem;}
+    .nav-link a {font-size: 1.6rem;}
+    .user-btn {padding: 0.5rem 1rem;}
+}
