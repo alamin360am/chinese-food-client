@@ -20,3 +20,30 @@ body {
   font-weight: 400;
   color: #151515;
 }
+
+/* CSS Components */
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  .grid {gap: 1rem;}
+  
+  .col-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .col-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

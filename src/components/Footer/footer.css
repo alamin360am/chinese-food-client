@@ -1,0 +1,42 @@
+footer {
+    padding: 3rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.footer-logo {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-logo img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.address {
+    width: 80%;
+    padding: 2rem;
+}
+
+footer .link {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .link a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .link a:hover {
+    text-decoration: underline;
+}
