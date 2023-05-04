@@ -1,0 +1,14 @@
+.chef-recipes {
+    background-color: #e6fef1;
+}
+
+.chef-banner {
+    margin-bottom: 2rem;
+}
+
+.chef-banner .chef-card {
+    width: 20%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 0;
+}
