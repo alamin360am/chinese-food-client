@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCheck, faUtensilSpoon, faThumbTack, faSmile } from "@fortawesome/free-solid-svg-icons";
 import { useLoaderData } from "react-router-dom";
 import Chefs from "../Chefs/Chefs";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Home = () => {
     const datas = useLoaderData();
+    const [loading, setLoading] = useState(false);
+
+    useEffect(()=>{
+      setLoading(true)
+      setTimeout(()=>{
+        setLoading(false)
+      },500)
+    },[])
   return (
     <main>
-      <div className="banner">
+      {
+        loading? <ClipLoader></ClipLoader> : <div>
+          <div className="banner">
         <h1 className="title">
           All <span>Chinese Recipes</span> are here.
         </h1>
@@ -64,6 +75,8 @@ const Home = () => {
             }
         </div>
       </section>
+        </div>
+      }
     </main>
   );
 };
