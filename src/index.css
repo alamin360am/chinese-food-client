@@ -22,7 +22,7 @@ body {
 }
 
 section {
-  padding: 3rem 0;
+  padding: 3rem 10rem;
 }
 
 /* CSS Components */
@@ -71,6 +71,9 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    padding: 3rem;
+  }
   .grid {
     gap: 1rem;
   }

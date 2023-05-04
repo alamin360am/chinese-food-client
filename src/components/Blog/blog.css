@@ -1,0 +1,14 @@
+.question-box {
+    padding: 2rem;
+    background: #e9ffed;
+    border-radius: 5px;
+}
+
+.question {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.answer {
+    text-align: justify;
+}
