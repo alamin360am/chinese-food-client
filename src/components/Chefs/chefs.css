@@ -51,3 +51,8 @@
 .chef-card .likes .like .icon {
     color: #FFBA08;
 }
+
+.chef-card a {
+    text-decoration: none;
+    text-align: center;
+}
