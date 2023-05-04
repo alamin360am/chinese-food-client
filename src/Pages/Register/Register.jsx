@@ -1,18 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./register.css";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-    const [error, setError] = useState('');
+  const {createUser} = useContext(AuthContext);
+
+  const [error, setError] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    setError('');
-    if(password.length < 6) {
-        setError('Please add at least 6 characters in your password');
-        return;
+    const photo = event.target.photo.value;
+
+    createUser(email, password)
+    .then(result => {
+      const createdUser = result.user;
+      console.log(createdUser);
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+
+    setError("");
+    if (password.length < 6) {
+      setError("Please add at least 6 characters in your password");
+      return;
     }
   };
 
@@ -37,6 +52,16 @@ const Register = () => {
             name="email"
             id="email"
             placeholder="Your Email"
+            required
+          />
+        </div>
+        <div className="input">
+          <label>Your Photo URL</label>
+          <input
+            type="text"
+            name="photo"
+            id="photo"
+            placeholder="Your photo url"
             required
           />
         </div>
