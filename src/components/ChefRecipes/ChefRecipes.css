@@ -6,9 +6,17 @@
     margin-bottom: 2rem;
 }
 
+.chef-banner .description {
+    margin-bottom: 2rem;
+}
+
 .chef-banner .chef-card {
-    width: 20%;
+    width: 30%;
     margin: 0 auto;
     background-color: transparent;
     padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .chef-banner .chef-card {width: 80%;}
 }

@@ -9,11 +9,13 @@ import Main from "./components/layouts/Main";
 import Home from "./components/Home/Home";
 import Blog from "./components/Blog/Blog";
 import ChefRecipes from "./components/ChefRecipes/ChefRecipes";
+import ErrorPage from "./components/404Page/errorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -30,7 +32,13 @@ const router = createBrowserRouter([
         path: '/:id',
         element: <ChefRecipes></ChefRecipes>,
         loader: ({params}) => fetch('http://localhost:5000/data')
-      }
+      },
+
+      // {
+      //   path: "/",
+      //   element: <Home></Home>,
+      //   loader: () => fetch('http://localhost:5000/data')
+      // }
     ]
   },
 ]);

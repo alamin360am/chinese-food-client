@@ -3,27 +3,27 @@ import "./ChefRecipes.css";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import Recipes from "../Recipes/Recipes";
 
 const ChefRecipes = () => {
   const chefs = useLoaderData();
-  const chef_id = useParams().id;
+  const chefs_id = useParams().id;
 
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
-    const chef = chefs.find((chef) => chef.chef_id == chef_id);
+    const chef = chefs.find((chef) => chef.chef_id == chefs_id);
     setRecipes(chef);
   }, []);
 
-  console.log(recipes);
-
   const {
+    chef_id,
     chef_name,
     chef_photo,
     experience,
+    description,
     likes,
-    numbers_of_recipes,
-    recipe,
+    numbers_of_recipes
   } = recipes;
 
   return (
@@ -34,6 +34,7 @@ const ChefRecipes = () => {
             <img src={chef_photo} alt="" />
           </div>
           <h3 className="name">{chef_name}</h3>
+          <p className="description">{description}</p>
           <p className="experience">{experience}+ years experience</p>
           <div className="likes">
             <p className="recipe-number">
@@ -46,6 +47,7 @@ const ChefRecipes = () => {
           </div>
         </div>
       </div>
+      <Recipes id={chef_id}></Recipes>
     </section>
   );
 };
