@@ -5,6 +5,8 @@ import { faUserCheck, faUtensilSpoon, faThumbTack, faSmile } from "@fortawesome/
 import { useLoaderData } from "react-router-dom";
 import Chefs from "../../components/Chefs/Chefs";
 import ClipLoader from "react-spinners/ClipLoader";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
     const datas = useLoaderData();
