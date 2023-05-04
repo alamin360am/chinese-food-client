@@ -12,6 +12,7 @@ import ErrorPage from "./components/404Page/ErrorPage";
 import ChefRecipes from "./components/ChefRecipes/ChefRecipes";
 import LogIn from "./Pages/LogIn/LogIn";
 import Register from "./Pages/Register/Register";
+import AuthProvider from "./providers/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
