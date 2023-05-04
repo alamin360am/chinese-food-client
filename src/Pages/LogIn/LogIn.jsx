@@ -5,7 +5,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const LogIn = () => {
     const navigate = useNavigate();
-    const {signIn} = useContext(AuthContext);
+    const {signIn, googleSignIn} = useContext(AuthContext);
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
@@ -22,6 +22,16 @@ const LogIn = () => {
             console.log(error);
         })
     }
+
+    const googleLogIn = () =>{
+        googleSignIn()
+        .then (result => {
+            console.log(result);
+        })
+    }
+
+    
+    const gitHubLogIn = () =>{}
     
     return (
         <div className='form'>
@@ -38,8 +48,8 @@ const LogIn = () => {
                 <p>New in Chinese Food? <Link to='/register'>create an account</Link></p>
                 <input type="submit" value="Log In" />
             </form>
-            <button className="btn-outline">Google Sign In</button>
-            <button className="btn-outline">GitHub Sign In</button>
+            <button onClick={googleLogIn} className="btn-outline">Google Sign In</button>
+            <button onClick={gitHubLogIn} className="btn-outline">GitHub Sign In</button>
         </div>
     );
 };
