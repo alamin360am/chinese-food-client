@@ -2,6 +2,7 @@ import React from "react";
 import "./blog.css";
 
 const Blog = () => {
+    const ref = React.createRef()
   return (
     <section className="blog section">
       <h2 className="section-title">Question and answer (QnA)</h2>
@@ -44,6 +45,11 @@ const Blog = () => {
           <p className="answer">Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code.</p>
         </div>
       </div>
+      {/* <ReactToPdf targetRef={ref} filename="div-blue.pdf">
+        {({toPdf}) => (
+            <button onClick={toPdf}>Generate pdf</button>
+        )}
+    </ReactToPdf> */}
     </section>
   );
 };

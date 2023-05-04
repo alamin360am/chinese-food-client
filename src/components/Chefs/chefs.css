@@ -1,0 +1,53 @@
+.chef-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.chef-card .chef-img-box {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #FFBA08;
+    margin: 2rem auto;
+}
+
+.chef-card .chef-img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.chef-card .name {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.chef-card .experience {
+    margin-bottom: 1rem;
+}
+
+.chef-card .likes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chef-card .likes .recipe-number span {
+    font-weight: 700;
+    color: #FFBA08;
+}
+
+.chef-card .likes .like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chef-card .likes .like .icon {
+    color: #FFBA08;
+}

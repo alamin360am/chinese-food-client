@@ -2,8 +2,11 @@ import React from "react";
 import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCheck, faUtensilSpoon, faThumbTack, faSmile } from "@fortawesome/free-solid-svg-icons";
+import { useLoaderData } from "react-router-dom";
+import Chefs from "../Chefs/Chefs";
 
 const Home = () => {
+    const datas = useLoaderData();
   return (
     <main>
       <div className="banner">
@@ -48,6 +51,17 @@ const Home = () => {
             <div className="img-box">
                 <img src="./partner-04.png" alt="" />
             </div>
+        </div>
+      </section>
+      <section className="chef">
+        <h2 className="section-title">Our Chefs</h2>
+        <div className="grid col-3">
+            {
+                datas.map(data => <Chefs 
+                    key={data.chef_id}
+                    chefs = {data}
+                    ></Chefs>)
+            }
         </div>
       </section>
     </main>
