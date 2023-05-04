@@ -66,6 +66,17 @@ section {
   background-color: #F48C06;
 }
 
+.btn-outline {
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  border: 1px solid #ffba08;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 991px) {
   .col-4 {grid-template-columns: repeat(2, 1fr);}
 }

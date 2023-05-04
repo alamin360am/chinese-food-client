@@ -1,0 +1,37 @@
+.form {
+    padding: 5rem 10rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6fef1;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+form  p {
+    margin-bottom: 2rem;
+}
+
+form .input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+form input {
+    width: 40rem;
+    border: none;
+    outline: none;
+    padding: 2rem;
+    font-size: 1.6rem;
+}
+
+.error-message {
+    font-size: 1.6rem;
+    color: #ff1616;
+}
