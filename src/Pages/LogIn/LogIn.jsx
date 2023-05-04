@@ -1,16 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const LogIn = () => {
     const navigate = useNavigate();
-    const {signIn, googleSignIn} = useContext(AuthContext);
+    const [error, setError] = useState('')
+    const {signIn, googleSignIn, gitHubSignIn} = useContext(AuthContext);
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = event => {
         event.preventDefault();
+        setError('');
         const email = event.target.email.value;
         const password = event.target.password.value;
         signIn(email, password)
@@ -19,7 +21,8 @@ const LogIn = () => {
             navigate(from)
         })
         .catch(error=>{
-            console.log(error);
+            setError("Your email or password doesn't match");
+            console.log(error.message);
         })
     }
 
@@ -31,7 +34,13 @@ const LogIn = () => {
     }
 
     
-    const gitHubLogIn = () =>{}
+    const gitHubLogIn = () =>{
+        gitHubSignIn()
+        .then(result => {
+            console.log(result);
+        })
+    }
+    console.log(error);
     
     return (
         <div className='form'>
@@ -45,6 +54,7 @@ const LogIn = () => {
                     <label>Your Password</label>
                     <input type="password" name="password" id="password" placeholder='Your password' required />
                 </div>
+                <p className="error-message">{error}</p>
                 <p>New in Chinese Food? <Link to='/register'>create an account</Link></p>
                 <input type="submit" value="Log In" />
             </form>

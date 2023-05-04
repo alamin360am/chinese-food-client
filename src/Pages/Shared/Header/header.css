@@ -29,6 +29,24 @@ nav .logo img {
     color: #000;
 }
 
+nav .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .user .user-img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+nav .user .user-img img {
+    width: 100%;
+}
+
 .user-btn {
     border: none;
     outline: none;
