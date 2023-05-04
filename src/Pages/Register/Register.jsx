@@ -15,12 +15,14 @@ const Register = () => {
     const password = event.target.password.value;
     const photo = event.target.photo.value;
 
+    setError('')
     createUser(email, password)
     .then(result => {
       const createdUser = result.user;
       console.log(createdUser);
     })
     .catch(error=> {
+      setError('This Email Already in use')
       console.log(error);
     })
 
@@ -42,7 +44,6 @@ const Register = () => {
             name="name"
             id="name"
             placeholder="Your Name"
-            required
           />
         </div>
         <div className="input">
@@ -62,7 +63,6 @@ const Register = () => {
             name="photo"
             id="photo"
             placeholder="Your photo url"
-            required
           />
         </div>
         <div className="input">
@@ -79,7 +79,7 @@ const Register = () => {
           Have an account? <Link to="/login">Log In</Link>
         </p>
         <p className="error-message">{error}</p>
-        <input type="submit" value="Sign Up" />
+        <input className="btn-primary" type="submit" value="Sign Up" />
       </form>
     </div>
   );

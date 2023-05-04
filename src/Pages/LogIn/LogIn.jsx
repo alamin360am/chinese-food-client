@@ -56,7 +56,7 @@ const LogIn = () => {
                 </div>
                 <p className="error-message">{error}</p>
                 <p>New in Chinese Food? <Link to='/register'>create an account</Link></p>
-                <input type="submit" value="Log In" />
+                <input type="submit" value="Log In" className='btn-primary' />
             </form>
             <button onClick={googleLogIn} className="btn-outline">Google Sign In</button>
             <button onClick={gitHubLogIn} className="btn-outline">GitHub Sign In</button>

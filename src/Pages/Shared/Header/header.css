@@ -47,22 +47,6 @@ nav .user .user-img img {
     width: 100%;
 }
 
-.user-btn {
-    border: none;
-    outline: none;
-    background-color: #FFBA08;
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: all 0.4s;
-}
-
-.user-btn:hover {
-    background-color: #F48C06;
-}
-
 @media screen and (max-width: 768px) {
     header {padding: 1rem 2rem;}
     nav .logo {width: 4rem;}

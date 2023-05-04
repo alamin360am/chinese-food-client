@@ -59,6 +59,7 @@ section {
   border-radius: 8px;
   font-size: 1.6rem;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.4s;
 }
 

@@ -12,3 +12,7 @@
 .answer {
     text-align: justify;
 }
+
+.blog-section .btn-primary {
+    margin-top: 2rem;
+}

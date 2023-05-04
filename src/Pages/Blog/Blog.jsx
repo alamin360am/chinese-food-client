@@ -1,12 +1,14 @@
 import React from "react";
 import "./blog.css";
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 const Blog = () => {
-    const ref = React.createRef()
   return (
-    <section className="blog section">
+    <section className="blog-section">
       <h2 className="section-title">Question and answer (QnA)</h2>
-      <div className="grid col-2">
+      <div ref={ref} className="grid col-2">
         <div className="question-box">
           <h3 className="question">
             What is the differences between uncontrolled and controlled
@@ -45,11 +47,9 @@ const Blog = () => {
           <p className="answer">Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code.</p>
         </div>
       </div>
-      {/* <ReactToPdf targetRef={ref} filename="div-blue.pdf">
-        {({toPdf}) => (
-            <button onClick={toPdf}>Generate pdf</button>
-        )}
-    </ReactToPdf> */}
+      <Pdf targetRef={ref} filename="blog.pdf">
+        {({ toPdf }) => <button onClick={toPdf} className="btn-primary">Generate Pdf</button>}
+      </Pdf>
     </section>
   );
 };

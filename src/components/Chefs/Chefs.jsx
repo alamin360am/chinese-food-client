@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import './chefs.css'
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const Chefs = (props) => {
     const {chef_id, chef_name, chef_photo, experience, likes, numbers_of_recipes} = props.chefs;
@@ -10,7 +11,7 @@ const Chefs = (props) => {
     return (
         <div className='chef-card'>
             <div className="chef-img-box">
-                <img src={chef_photo} alt="" />
+                <LazyLoad offset={600}><img src={chef_photo} alt="" /></LazyLoad>
             </div>
             <h3 className="name">{chef_name}</h3>
             <p className="experience">{experience}+ years experience</p>
