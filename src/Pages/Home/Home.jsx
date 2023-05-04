@@ -3,7 +3,7 @@ import "./home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCheck, faUtensilSpoon, faThumbTack, faSmile } from "@fortawesome/free-solid-svg-icons";
 import { useLoaderData } from "react-router-dom";
-import Chefs from "../Chefs/Chefs";
+import Chefs from "../../components/Chefs/Chefs";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const Home = () => {

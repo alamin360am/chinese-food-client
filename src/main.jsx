@@ -5,13 +5,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Main from "./components/layouts/Main";
-import Home from "./components/Home/Home";
-import Blog from "./components/Blog/Blog";
+import Main from "./layouts/Main";
+import Home from "./Pages/Home/Home";
+import Blog from "./Pages/Blog/Blog";
+import ErrorPage from "./components/404Page/ErrorPage";
 import ChefRecipes from "./components/ChefRecipes/ChefRecipes";
-import ErrorPage from "./components/404Page/errorPage";
-import LogIn from "./components/LogIn/LogIn";
-import Register from "./components/Register/Register";
+import LogIn from "./Pages/LogIn/LogIn";
+import Register from "./Pages/Register/Register";
 
 const router = createBrowserRouter([
   {

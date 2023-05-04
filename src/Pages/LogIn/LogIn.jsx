@@ -9,6 +9,7 @@ const LogIn = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
     }
+    
     return (
         <div className='form'>
             <h2 className="section-title">Log In</h2>
