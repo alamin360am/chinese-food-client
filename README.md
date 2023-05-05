@@ -1,5 +1,5 @@
 # Chinese Food
-# Live link: [I'm an inline-style link](https://chinise-food.web.app/)
+# Live link: [https://chinise-food.web.app/](https://chinise-food.web.app/)
 
 ## Feature
 * This website is shows popular chinese chefs with there recipes.
