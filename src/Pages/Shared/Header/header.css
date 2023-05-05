@@ -61,6 +61,7 @@ nav .nav-show {
     transform: translate(-50%, 0);
     padding: 3rem;
     background-color: #ffba08;
+    z-index: 200000;
 }
 
 nav .nav-show a {
