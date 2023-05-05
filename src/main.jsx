@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/data')
+        loader: () => fetch('https://chinese-food-server-alamin360am.vercel.app/data')
       },
 
       {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/:id',
         element: <PrivateRoutes><ChefRecipes></ChefRecipes></PrivateRoutes>,
-        loader: ({params}) => fetch('http://localhost:5000/data')
+        loader: ({params}) => fetch('https://chinese-food-server-alamin360am.vercel.app/data')
       }, 
       {
         path: '/login',

@@ -28,12 +28,17 @@ const Home = () => {
       ) : (
         <div>
           <div className="banner">
+            <div className="banner-img">
+              <img src="./banner.jpg" alt="" />
+            </div>
+            <div className="banner-info">
             <h1 className="title">
               All <span>Chinese Recipes</span> are here.
             </h1>
             <a href="#chefs" className="btn-primary">
               Explore More
             </a>
+            </div>
           </div>
           <section className="feature">
             <h2 className="section-title">Our Features</h2>
