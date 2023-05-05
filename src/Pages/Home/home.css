@@ -1,5 +1,4 @@
 main {
-    padding: 0 10rem;
     background-color: #e6fef1;
 }
 
@@ -13,6 +12,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 10rem;
 }
 
 .banner .title {
@@ -57,15 +57,23 @@ main {
     font-weight: 700;
 }
 
+.partners .img-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 .partners .img-box img {
     width: 40%;
 }
 
+@media screen and (max-width: 991px) {
+    .banner {margin: 0 4rem;}
+}
+
 @media screen and (max-width: 768px) {
-    main {
-        padding: 0 2rem;
-    }
-    
+    .banner {margin: 0 2rem;}
+
     .banner .title {
         font-size: 2.4rem;
         margin-bottom: 2rem;

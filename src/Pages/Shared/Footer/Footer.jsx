@@ -10,9 +10,15 @@ const Footer = () => {
             </div>
             <div className="address">
                 <h2>Address</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dignissimos at modi consequatur amet aperiam debitis sapiente obcaecati iusto eligendi?</p>
+                <p>
+                    Road No: 22C <br />
+                    House No: 110A <br />
+                    New Engineer Para, <br />
+                    Rangpur, Bangladesh
+                </p>
             </div>
             <div className="link">
+                <h2>Links</h2>
                 <Link to='/'>Home</Link>
                 <Link to='/blog'>Blogs</Link>
                 <a href="#">Contact Us</a>

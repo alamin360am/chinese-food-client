@@ -17,11 +17,6 @@ footer {
     height: 15rem;
 }
 
-.address {
-    width: 80%;
-    padding: 2rem;
-}
-
 footer .link {
     display: flex;
     flex-direction: column;
@@ -35,4 +30,13 @@ footer .link a {
 
 footer .link a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 3rem;
+    }
+    .address {
+        margin-bottom: 2rem;
+    }
 }

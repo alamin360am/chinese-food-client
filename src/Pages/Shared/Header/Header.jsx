@@ -1,21 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./header.css";
 import logo from "/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [condition, setCondition] = useState(true);
+
   const handleLogOUt = () => {
     logOut();
   };
+
+  const toggleButton = () => {
+    setCondition(!condition);
+  }
+
   return (
     <header>
       <nav>
         <div className="logo">
           <img src={logo} alt="" />
         </div>
-        <div className="nav-link">
+        <div onClick={toggleButton} className="icon-box">
+          {
+            condition? <FontAwesomeIcon icon={faBars} className="icon"/>:
+            <FontAwesomeIcon icon={faXmark} className="icon"/>
+          }
+        </div>
+        <div className={`nav-link ${condition? 'nav-hide' : 'nav-show'}`}>
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active" : "")}
@@ -31,7 +46,7 @@ const Header = () => {
           {user ? (
             ""
           ) : (
-            <sapn>
+            <span className={condition? '' : 'show'}>
               <NavLink
                 to="/register"
                 className={({ isActive }) => (isActive ? "active" : "")}
@@ -44,7 +59,7 @@ const Header = () => {
               >
                 Log In
               </NavLink>
-            </sapn>
+            </span>
           )}
         </div>
         <div className="user">
